@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -euo pipefail
+set -x
+
 # define binaries
 python_bin=/usr/bin/python3
 

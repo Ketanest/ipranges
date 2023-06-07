@@ -99,16 +99,6 @@ A list of IP addresses from all sources combined into one file.
 - IPv6: https://raw.githubusercontent.com/ketanest/ipranges/main/all/ipv6.txt
 - IPv6 (merged): https://raw.githubusercontent.com/ketanest/ipranges/main/all/ipv6_merged.txt
 
-## Friendly Repos
-
-- Akamai: https://github.com/SecOps-Institute/Akamai-ASN-and-IPs-List
-- LinkedIn: https://github.com/SecOps-Institute/LinkedInIPLists
-- TOR: https://github.com/SecOps-Institute/Tor-IP-Addresses
-- Spamhaus: https://github.com/SecOps-Institute/SpamhausIPLists
-- Alibaba, Telegram and others: https://github.com/im-sm/Mikrotik-IP-List
-
 ## Author
 
 Lord_Alfred
-
-Blog (Russian language): [https://t.me/Lord_Alfred](https://t.me/Lord_Alfred)

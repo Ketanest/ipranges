@@ -1,10 +1,13 @@
 #!/bin/bash
-
 set -euo pipefail
 set -x
 
-# define binaries
+# define variables
 python_bin=/usr/bin/python3
+datetime=$(date +'%Y%m%d%H%M%S')
+
+# cd to correct directory
+cd /usr/local/bin/ipranges/
 
 # start downloaders
 bash google/downloader.sh
@@ -54,7 +57,6 @@ $python_bin utils/merge.py --source=all/ipv6.txt | sort -h > all/ipv6_merged.txt
 
 
 # commit and push
-datetime=$(date +'%Y%m%d%H%M%S')
 git add .
 git commit -m $datetime
 git push

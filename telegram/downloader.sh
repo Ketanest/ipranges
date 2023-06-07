@@ -16,5 +16,5 @@ while IFS= read -r line; do
 done < /tmp/telegram.txt
 
 # sort & uniq
-sort -h /tmp/telegram-ipv4.txt | uniq > ipv4.txt
-sort -h /tmp/telegram-ipv6.txt | uniq > ipv6.txt
+sort -h /tmp/telegram-ipv4.txt | uniq > telegram/ipv4.txt
+sort -h /tmp/telegram-ipv6.txt | uniq > telegram/ipv6.txt

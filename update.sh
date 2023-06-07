@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # define binaries
-python_bin = /usr/bin/python3
+python_bin=/usr/bin/python3
 
 # start downloaders
 bash google/downloader.sh
@@ -21,6 +21,7 @@ cat google/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt git
 
 
 # merge ipv4
+$python_bin utils/merge.py --source=apple/ipv4.txt | sort -h > apple/ipv4_merged.txt
 $python_bin utils/merge.py --source=google/ipv4.txt | sort -h > google/ipv4_merged.txt
 $python_bin utils/merge.py --source=amazon/ipv4.txt | sort -h > amazon/ipv4_merged.txt
 $python_bin utils/merge.py --source=microsoft/ipv4.txt | sort -h > microsoft/ipv4_merged.txt
@@ -50,15 +51,8 @@ $python_bin utils/merge.py --source=all/ipv6.txt | sort -h > all/ipv6_merged.txt
 
 
 # commit and push
+datetime=$(date +'%Y%m%d%H%M%S')
 git add .
-git commit
+git commit -m $datetime
 git push
-
-
-
-
-
-
-
-
 

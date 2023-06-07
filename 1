@@ -1,0 +1,759 @@
++ python_bin=/usr/bin/python3
++ bash google/downloader.sh
++ curl -s https://www.gstatic.com/ipranges/goog.txt
++ curl -s https://www.gstatic.com/ipranges/cloud.json
++ curl -s https://developers.google.com/search/apis/ipranges/googlebot.json
+++ dig TXT _netblocks.google.com +short @8.8.8.8
++ txt='"v=spf1 ip4:35.190.247.0/24 ip4:64.233.160.0/19 ip4:66.102.0.0/20 ip4:66.249.80.0/20 ip4:72.14.192.0/18 ip4:74.125.0.0/16 ip4:108.177.8.0/21 ip4:173.194.0.0/16 ip4:209.85.128.0/17 ip4:216.58.192.0/19 ip4:216.239.32.0/19 ~all"'
++ idx=2
++ [[ -n "v=spf1 ip4:35.190.247.0/24 ip4:64.233.160.0/19 ip4:66.102.0.0/20 ip4:66.249.80.0/20 ip4:72.14.192.0/18 ip4:74.125.0.0/16 ip4:108.177.8.0/21 ip4:173.194.0.0/16 ip4:209.85.128.0/17 ip4:216.58.192.0/19 ip4:216.239.32.0/19 ~all" ]]
++ echo '"v=spf1 ip4:35.190.247.0/24 ip4:64.233.160.0/19 ip4:66.102.0.0/20 ip4:66.249.80.0/20 ip4:72.14.192.0/18 ip4:74.125.0.0/16 ip4:108.177.8.0/21 ip4:173.194.0.0/16 ip4:209.85.128.0/17 ip4:216.58.192.0/19 ip4:216.239.32.0/19 ~all"'
++ grep :
++ cut -d: -f2-
++ tr '[:space:]+' '\n'
+++ dig TXT _netblocks2.google.com +short @8.8.8.8
++ txt='"v=spf1 ip6:2001:4860:4000::/36 ip6:2404:6800:4000::/36 ip6:2607:f8b0:4000::/36 ip6:2800:3f0:4000::/36 ip6:2a00:1450:4000::/36 ip6:2c0f:fb50:4000::/36 ~all"'
++ (( idx++ ))
++ [[ -n "v=spf1 ip6:2001:4860:4000::/36 ip6:2404:6800:4000::/36 ip6:2607:f8b0:4000::/36 ip6:2800:3f0:4000::/36 ip6:2a00:1450:4000::/36 ip6:2c0f:fb50:4000::/36 ~all" ]]
++ echo '"v=spf1 ip6:2001:4860:4000::/36 ip6:2404:6800:4000::/36 ip6:2607:f8b0:4000::/36 ip6:2800:3f0:4000::/36 ip6:2a00:1450:4000::/36 ip6:2c0f:fb50:4000::/36 ~all"'
++ tr '[:space:]+' '\n'
++ grep :
++ cut -d: -f2-
+++ dig TXT _netblocks3.google.com +short @8.8.8.8
++ txt='"v=spf1 ip4:172.217.0.0/19 ip4:172.217.32.0/20 ip4:172.217.128.0/19 ip4:172.217.160.0/20 ip4:172.217.192.0/19 ip4:172.253.56.0/21 ip4:172.253.112.0/20 ip4:108.177.96.0/19 ip4:35.191.0.0/16 ip4:130.211.0.0/22 ~all"'
++ (( idx++ ))
++ [[ -n "v=spf1 ip4:172.217.0.0/19 ip4:172.217.32.0/20 ip4:172.217.128.0/19 ip4:172.217.160.0/20 ip4:172.217.192.0/19 ip4:172.253.56.0/21 ip4:172.253.112.0/20 ip4:108.177.96.0/19 ip4:35.191.0.0/16 ip4:130.211.0.0/22 ~all" ]]
++ echo '"v=spf1 ip4:172.217.0.0/19 ip4:172.217.32.0/20 ip4:172.217.128.0/19 ip4:172.217.160.0/20 ip4:172.217.192.0/19 ip4:172.253.56.0/21 ip4:172.253.112.0/20 ip4:108.177.96.0/19 ip4:35.191.0.0/16 ip4:130.211.0.0/22 ~all"'
++ tr '[:space:]+' '\n'
++ cut -d: -f2-
++ grep :
+++ dig TXT _netblocks4.google.com +short @8.8.8.8
++ txt=
++ (( idx++ ))
++ [[ -n '' ]]
++ get_dns_spf _cloud-netblocks.googleusercontent.com
++ dig @8.8.8.8 +short txt _cloud-netblocks.googleusercontent.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ get_dns_spf _cloud-netblocks1.googleusercontent.com
++ dig @8.8.8.8 +short txt _cloud-netblocks1.googleusercontent.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ get_dns_spf _cloud-netblocks6.googleusercontent.com
++ dig @8.8.8.8 +short txt _cloud-netblocks6.googleusercontent.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ echo 130.211.64.0/18
++ read entry
++ case "$entry" in
++ echo 130.211.128.0/17
++ read entry
++ case "$entry" in
++ echo 146.148.2.0/23
++ read entry
++ case "$entry" in
++ echo 146.148.4.0/22
++ read entry
++ case "$entry" in
++ echo 146.148.8.0/21
++ read entry
++ case "$entry" in
++ echo 146.148.16.0/20
++ read entry
++ case "$entry" in
++ echo 146.148.32.0/19
++ read entry
++ case "$entry" in
++ echo 146.148.64.0/18
++ read entry
++ case "$entry" in
++ echo 162.216.148.0/22
++ read entry
++ case "$entry" in
++ echo 162.222.176.0/21
++ read entry
++ case "$entry" in
++ echo 173.255.112.0/20
++ read entry
++ case "$entry" in
++ echo 192.158.28.0/22
++ read entry
++ case "$entry" in
++ read entry
++ read entry
++ case "$entry" in
++ get_dns_spf _cloud-netblocks7.googleusercontent.com
++ dig @8.8.8.8 +short txt _cloud-netblocks7.googleusercontent.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ echo 199.192.112.0/22
++ read entry
++ case "$entry" in
++ echo 199.223.232.0/22
++ read entry
++ case "$entry" in
++ echo 199.223.236.0/23
++ read entry
++ case "$entry" in
++ echo 208.68.108.0/23
++ read entry
++ case "$entry" in
++ read entry
++ read entry
++ case "$entry" in
++ echo 2600:1900::/35
++ read entry
++ case "$entry" in
++ echo 8.34.208.0/20
++ read entry
++ case "$entry" in
++ echo 8.35.192.0/21
++ read entry
++ case "$entry" in
++ echo 8.35.200.0/23
++ read entry
++ case "$entry" in
++ echo 23.236.48.0/20
++ read entry
++ case "$entry" in
++ echo 23.251.128.0/19
++ read entry
++ case "$entry" in
++ echo 34.64.0.0/11
++ read entry
++ case "$entry" in
++ echo 34.96.0.0/14
++ read entry
++ case "$entry" in
++ read entry
++ read entry
++ case "$entry" in
++ get_dns_spf _cloud-netblocks2.googleusercontent.com
++ dig @8.8.8.8 +short txt _cloud-netblocks2.googleusercontent.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ echo 34.100.0.0/16
++ read entry
++ case "$entry" in
++ echo 34.102.0.0/15
++ read entry
++ case "$entry" in
++ echo 34.104.0.0/14
++ read entry
++ case "$entry" in
++ echo 34.124.0.0/18
++ read entry
++ case "$entry" in
++ echo 34.124.64.0/20
++ read entry
++ case "$entry" in
++ echo 34.124.80.0/23
++ read entry
++ case "$entry" in
++ echo 34.124.84.0/22
++ read entry
++ case "$entry" in
++ echo 34.124.88.0/23
++ read entry
++ case "$entry" in
++ echo 34.124.92.0/22
++ read entry
++ case "$entry" in
++ echo 34.125.0.0/16
++ read entry
++ case "$entry" in
++ echo 35.184.0.0/14
++ read entry
++ case "$entry" in
++ echo 35.188.0.0/15
++ read entry
++ case "$entry" in
++ echo 35.190.0.0/17
++ read entry
++ case "$entry" in
++ read entry
++ read entry
++ case "$entry" in
++ get_dns_spf _cloud-netblocks3.googleusercontent.com
++ dig @8.8.8.8 +short txt _cloud-netblocks3.googleusercontent.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ echo 35.190.128.0/18
++ read entry
++ case "$entry" in
++ echo 35.190.192.0/19
++ read entry
++ case "$entry" in
++ echo 35.190.224.0/20
++ read entry
++ case "$entry" in
++ echo 35.190.240.0/22
++ read entry
++ case "$entry" in
++ echo 35.192.0.0/14
++ read entry
++ case "$entry" in
++ echo 35.196.0.0/15
++ read entry
++ case "$entry" in
++ echo 35.198.0.0/16
++ read entry
++ case "$entry" in
++ echo 35.199.0.0/17
++ read entry
++ case "$entry" in
++ echo 35.199.128.0/18
++ read entry
++ case "$entry" in
++ echo 35.200.0.0/13
++ read entry
++ case "$entry" in
++ echo 35.208.0.0/13
++ read entry
++ case "$entry" in
++ echo 35.216.0.0/15
++ read entry
++ case "$entry" in
++ read entry
++ read entry
++ case "$entry" in
++ get_dns_spf _cloud-netblocks4.googleusercontent.com
++ dig @8.8.8.8 +short txt _cloud-netblocks4.googleusercontent.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ echo 35.219.192.0/24
++ read entry
++ case "$entry" in
++ echo 35.220.0.0/14
++ read entry
++ case "$entry" in
++ echo 35.224.0.0/13
++ read entry
++ case "$entry" in
++ echo 35.232.0.0/15
++ read entry
++ case "$entry" in
++ echo 35.234.0.0/16
++ read entry
++ case "$entry" in
++ echo 35.235.0.0/17
++ read entry
++ case "$entry" in
++ echo 35.235.192.0/20
++ read entry
++ case "$entry" in
++ echo 35.235.216.0/21
++ read entry
++ case "$entry" in
++ echo 35.235.224.0/20
++ read entry
++ case "$entry" in
++ echo 35.236.0.0/14
++ read entry
++ case "$entry" in
++ echo 35.240.0.0/13
++ read entry
++ case "$entry" in
++ echo 104.154.0.0/15
++ read entry
++ case "$entry" in
++ echo 104.196.0.0/14
++ read entry
++ case "$entry" in
++ read entry
++ read entry
++ case "$entry" in
++ get_dns_spf _cloud-netblocks5.googleusercontent.com
++ dig @8.8.8.8 +short txt _cloud-netblocks5.googleusercontent.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ echo 107.167.160.0/19
++ read entry
++ case "$entry" in
++ echo 107.178.192.0/18
++ read entry
++ case "$entry" in
++ echo 108.59.80.0/20
++ read entry
++ case "$entry" in
++ echo 108.170.192.0/20
++ read entry
++ case "$entry" in
++ echo 108.170.208.0/21
++ read entry
++ case "$entry" in
++ echo 108.170.216.0/22
++ read entry
++ case "$entry" in
++ echo 108.170.220.0/23
++ read entry
++ case "$entry" in
++ echo 108.170.222.0/24
++ read entry
++ case "$entry" in
++ echo 130.211.4.0/22
++ read entry
++ case "$entry" in
++ echo 130.211.8.0/21
++ read entry
++ case "$entry" in
++ echo 130.211.16.0/20
++ read entry
++ case "$entry" in
++ echo 130.211.32.0/19
++ read entry
++ case "$entry" in
++ read entry
++ read entry
++ case "$entry" in
++ read entry
++ get_dns_spf _spf.google.com
++ dig @8.8.8.8 +short txt _spf.google.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ get_dns_spf _netblocks.google.com
++ dig @8.8.8.8 +short txt _netblocks.google.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ echo 35.190.247.0/24
++ read entry
++ case "$entry" in
++ echo 64.233.160.0/19
++ read entry
++ case "$entry" in
++ echo 66.102.0.0/20
++ read entry
++ case "$entry" in
++ echo 66.249.80.0/20
++ read entry
++ case "$entry" in
++ echo 72.14.192.0/18
++ read entry
++ case "$entry" in
++ echo 74.125.0.0/16
++ read entry
++ case "$entry" in
++ echo 108.177.8.0/21
++ read entry
++ case "$entry" in
++ echo 173.194.0.0/16
++ read entry
++ case "$entry" in
++ echo 209.85.128.0/17
++ read entry
++ case "$entry" in
++ echo 216.58.192.0/19
++ read entry
++ case "$entry" in
++ echo 216.239.32.0/19
++ read entry
++ case "$entry" in
++ read entry
++ read entry
++ case "$entry" in
++ get_dns_spf _netblocks2.google.com
++ dig @8.8.8.8 +short txt _netblocks2.google.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ echo 2001:4860:4000::/36
++ read entry
++ case "$entry" in
++ echo 2404:6800:4000::/36
++ read entry
++ case "$entry" in
++ echo 2607:f8b0:4000::/36
++ read entry
++ case "$entry" in
++ echo 2800:3f0:4000::/36
++ read entry
++ case "$entry" in
++ echo 2a00:1450:4000::/36
++ read entry
++ case "$entry" in
++ echo 2c0f:fb50:4000::/36
++ read entry
++ case "$entry" in
++ read entry
++ read entry
++ case "$entry" in
++ get_dns_spf _netblocks3.google.com
++ dig @8.8.8.8 +short txt _netblocks3.google.com
++ read entry
++ tr ' ' '\n'
++ case "$entry" in
++ read entry
++ case "$entry" in
++ echo 172.217.0.0/19
++ read entry
++ case "$entry" in
++ echo 172.217.32.0/20
++ read entry
++ case "$entry" in
++ echo 172.217.128.0/19
++ read entry
++ case "$entry" in
++ echo 172.217.160.0/20
++ read entry
++ case "$entry" in
++ echo 172.217.192.0/19
++ read entry
++ case "$entry" in
++ echo 172.253.56.0/21
++ read entry
++ case "$entry" in
++ echo 172.253.112.0/20
++ read entry
++ case "$entry" in
++ echo 108.177.96.0/19
++ read entry
++ case "$entry" in
++ echo 35.191.0.0/16
++ read entry
++ case "$entry" in
++ echo 130.211.0.0/22
++ read entry
++ case "$entry" in
++ read entry
++ read entry
++ case "$entry" in
++ read entry
++ grep -v : /tmp/goog.txt
++ jq '.prefixes[] | [.ipv4Prefix][] | select(. != null)' -r /tmp/cloud.json
++ jq '.prefixes[] | [.ipv4Prefix][] | select(. != null)' -r /tmp/googlebot.json
++ grep -v : /tmp/netblocks.txt
++ grep : /tmp/goog.txt
++ jq '.prefixes[] | [.ipv6Prefix][] | select(. != null)' -r /tmp/cloud.json
++ jq '.prefixes[] | [.ipv6Prefix][] | select(. != null)' -r /tmp/googlebot.json
++ grep : /tmp/netblocks.txt
++ sort -h /tmp/google-ipv4.txt
++ uniq
++ sort -h /tmp/google-ipv6.txt
++ uniq
++ bash amazon/downloader.sh
++ curl -s https://ip-ranges.amazonaws.com/ip-ranges.json
++ jq '.prefixes[] | [.ip_prefix][] | select(. != null)' -r /tmp/amazon.json
++ jq '.ipv6_prefixes[] | [.ipv6_prefix][] | select(. != null)' -r /tmp/amazon.json
++ sort -h /tmp/amazon-ipv4.txt
++ uniq
++ sort -h /tmp/amazon-ipv6.txt
++ uniq
++ bash microsoft/downloader.sh
++ download_and_parse 56519
+++ curl -s 'https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519'
+++ sed -e 's/^<a href=["'\'']//' -e 's/["'\'']$//'
+++ grep ServiceTags_
+++ grep -o '<a href=['\''"][^"'\'']*['\''"]'
+++ head -1
++ URL=https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20230605.json
++ curl --connect-timeout 60 --retry 3 --retry-delay 15 -s https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20230605.json
++ jq '.values[] | [.properties] | .[].addressPrefixes[] | select(. != null)' -r /tmp/microsoft.json
++ grep -v : /tmp/microsoft-all.txt
++ grep : /tmp/microsoft-all.txt
++ download_and_parse 57063
+++ curl -s 'https://www.microsoft.com/en-us/download/confirmation.aspx?id=57063'
+++ grep ServiceTags_
+++ grep -o '<a href=['\''"][^"'\'']*['\''"]'
+++ head -1
+++ sed -e 's/^<a href=["'\'']//' -e 's/["'\'']$//'
++ URL=https://download.microsoft.com/download/6/4/D/64DB03BF-895B-4173-A8B1-BA4AD5D4DF22/ServiceTags_AzureGovernment_20230605.json
++ curl --connect-timeout 60 --retry 3 --retry-delay 15 -s https://download.microsoft.com/download/6/4/D/64DB03BF-895B-4173-A8B1-BA4AD5D4DF22/ServiceTags_AzureGovernment_20230605.json
++ jq '.values[] | [.properties] | .[].addressPrefixes[] | select(. != null)' -r /tmp/microsoft.json
++ grep -v : /tmp/microsoft-all.txt
++ grep : /tmp/microsoft-all.txt
++ download_and_parse 57064
+++ curl -s 'https://www.microsoft.com/en-us/download/confirmation.aspx?id=57064'
+++ grep ServiceTags_
+++ grep -o '<a href=['\''"][^"'\'']*['\''"]'
+++ head -1
+++ sed -e 's/^<a href=["'\'']//' -e 's/["'\'']$//'
++ URL=https://download.microsoft.com/download/0/7/6/076274AB-4B0B-4246-A422-4BAF1E03F974/ServiceTags_AzureGermany_20220307.json
++ curl --connect-timeout 60 --retry 3 --retry-delay 15 -s https://download.microsoft.com/download/0/7/6/076274AB-4B0B-4246-A422-4BAF1E03F974/ServiceTags_AzureGermany_20220307.json
++ jq '.values[] | [.properties] | .[].addressPrefixes[] | select(. != null)' -r /tmp/microsoft.json
++ grep -v : /tmp/microsoft-all.txt
++ grep : /tmp/microsoft-all.txt
++ download_and_parse 57062
+++ curl -s 'https://www.microsoft.com/en-us/download/confirmation.aspx?id=57062'
+++ grep ServiceTags_
+++ grep -o '<a href=['\''"][^"'\'']*['\''"]'
+++ head -1
+++ sed -e 's/^<a href=["'\'']//' -e 's/["'\'']$//'
++ URL=https://download.microsoft.com/download/9/D/0/9D03B7E2-4B80-4BF3-9B91-DA8C7D3EE9F9/ServiceTags_China_20230605.json
++ curl --connect-timeout 60 --retry 3 --retry-delay 15 -s https://download.microsoft.com/download/9/D/0/9D03B7E2-4B80-4BF3-9B91-DA8C7D3EE9F9/ServiceTags_China_20230605.json
++ jq '.values[] | [.properties] | .[].addressPrefixes[] | select(. != null)' -r /tmp/microsoft.json
++ grep -v : /tmp/microsoft-all.txt
++ grep : /tmp/microsoft-all.txt
++ sort -h /tmp/microsoft-ipv4.txt
++ uniq
++ sort -h /tmp/microsoft-ipv6.txt
++ uniq
++ bash oracle/downloader.sh
++ curl -s https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
++ jq '.regions[] | [.cidrs][] | .[].cidr | select(. != null)' -r /tmp/oracle.json
++ sort -h /tmp/oracle-ipv4.txt
++ uniq
++ bash digitalocean/downloader.sh
++ curl -s https://www.digitalocean.com/geo/google.csv
++ cut -d, -f1
++ grep -v : /tmp/digitalocean.txt
++ grep : /tmp/digitalocean.txt
++ sort -h /tmp/digitalocean-ipv4.txt
++ uniq
++ sort -h /tmp/digitalocean-ipv6.txt
++ uniq
++ bash bing/downloader.sh
++ curl -s https://www.bing.com/toolbox/bingbot.json
++ tr -cd '[:print:]\n'
++ jq '.prefixes[] | [.ipv4Prefix][] | select(. != null)' -r /tmp/bing.json
++ sort -h /tmp/bing-ipv4.txt
++ uniq
++ bash github/downloader.sh
++ curl -s https://api.github.com/meta
++ jq 'del(.["ssh_keys", "verifiable_password_authentication", "ssh_key_fingerprints", "domains"]) | .[] | .[]' -r /tmp/github.json
++ grep -v : /tmp/github-all.txt
++ grep : /tmp/github-all.txt
++ sort -h /tmp/github-ipv4.txt
++ uniq
++ sort -h /tmp/github-ipv6.txt
++ uniq
++ bash facebook/downloader.sh
++ get_routes AS32934
++ whois -h riswhois.ripe.net -- '-i origin AS32934'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.radb.net -- '-i origin AS32934'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h rr.ntt.net -- '-i origin AS32934'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.rogerstelecom.net -- '-i origin AS32934'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.bgp.net.br -- '-i origin AS32934'
++ awk '{ print $2; }'
++ grep '^route'
++ get_routes AS54115
++ whois -h riswhois.ripe.net -- '-i origin AS54115'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.radb.net -- '-i origin AS54115'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h rr.ntt.net -- '-i origin AS54115'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.rogerstelecom.net -- '-i origin AS54115'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.bgp.net.br -- '-i origin AS54115'
++ awk '{ print $2; }'
++ grep '^route'
++ get_routes AS63293
++ whois -h riswhois.ripe.net -- '-i origin AS63293'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.radb.net -- '-i origin AS63293'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h rr.ntt.net -- '-i origin AS63293'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.rogerstelecom.net -- '-i origin AS63293'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.bgp.net.br -- '-i origin AS63293'
++ awk '{ print $2; }'
++ grep '^route'
++ get_routes AS149642
++ whois -h riswhois.ripe.net -- '-i origin AS149642'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.radb.net -- '-i origin AS149642'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h rr.ntt.net -- '-i origin AS149642'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.rogerstelecom.net -- '-i origin AS149642'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.bgp.net.br -- '-i origin AS149642'
++ awk '{ print $2; }'
++ grep '^route'
++ echo failed
+failed
++ grep -v : /tmp/facebook.txt
++ grep : /tmp/facebook.txt
++ sort -h /tmp/facebook-ipv4.txt
++ uniq
++ sort -h /tmp/facebook-ipv6.txt
++ uniq
++ bash twitter/downloader.sh
++ get_routes AS13414
++ whois -h riswhois.ripe.net -- '-i origin AS13414'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.radb.net -- '-i origin AS13414'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h rr.ntt.net -- '-i origin AS13414'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.rogerstelecom.net -- '-i origin AS13414'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.bgp.net.br -- '-i origin AS13414'
++ awk '{ print $2; }'
++ grep '^route'
++ get_routes AS35995
++ whois -h riswhois.ripe.net -- '-i origin AS35995'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.radb.net -- '-i origin AS35995'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h rr.ntt.net -- '-i origin AS35995'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.rogerstelecom.net -- '-i origin AS35995'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.bgp.net.br -- '-i origin AS35995'
++ awk '{ print $2; }'
++ grep '^route'
++ get_routes AS54888
++ whois -h riswhois.ripe.net -- '-i origin AS54888'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.radb.net -- '-i origin AS54888'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h rr.ntt.net -- '-i origin AS54888'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.rogerstelecom.net -- '-i origin AS54888'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.bgp.net.br -- '-i origin AS54888'
++ awk '{ print $2; }'
++ grep '^route'
++ get_routes AS63179
++ whois -h riswhois.ripe.net -- '-i origin AS63179'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.radb.net -- '-i origin AS63179'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h rr.ntt.net -- '-i origin AS63179'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.rogerstelecom.net -- '-i origin AS63179'
++ awk '{ print $2; }'
++ grep '^route'
++ whois -h whois.bgp.net.br -- '-i origin AS63179'
++ awk '{ print $2; }'
++ grep '^route'
++ grep -v : /tmp/twitter.txt
++ grep : /tmp/twitter.txt
++ sort -h /tmp/twitter-ipv4.txt
++ uniq
++ sort -h /tmp/twitter-ipv6.txt
++ uniq
++ bash linode/downloader.sh
++ curl -s https://geoip.linode.com/
++ cut -d, -f1
++ grep -v '^#'
++ grep -v : /tmp/linode.txt
++ grep : /tmp/linode.txt
++ sort -h /tmp/linode-ipv4.txt
++ uniq
++ sort -h /tmp/linode-ipv6.txt
++ uniq
++ cat apple/ipv4.txt google/ipv4.txt amazon/ipv4.txt microsoft/ipv4.txt oracle/ipv4.txt digitalocean/ipv4.txt bing/ipv4.txt github/ipv4.txt facebook/ipv4.txt twitter/ipv4.txt linode/ipv4.txt telegram/ipv4.txt
++ uniq
++ sort -h
++ cat google/ipv6.txt amazon/ipv6.txt microsoft/ipv6.txt digitalocean/ipv6.txt github/ipv6.txt facebook/ipv6.txt twitter/ipv6.txt linode/ipv6.txt telegram/ipv6.txt
++ uniq
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=apple/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=google/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=amazon/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=microsoft/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=oracle/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=digitalocean/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=bing/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=github/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=facebook/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=twitter/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=linode/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=telegram/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=all/ipv4.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=google/ipv6.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=amazon/ipv6.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=microsoft/ipv6.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=digitalocean/ipv6.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=github/ipv6.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=facebook/ipv6.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=twitter/ipv6.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=linode/ipv6.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=telegram/ipv6.txt
++ sort -h
++ /usr/bin/python3 utils/merge.py --source=all/ipv6.txt
++ sort -h
+++ date +%Y%m%d%H%M%S
++ datetime=20230607173318
++ git add .
